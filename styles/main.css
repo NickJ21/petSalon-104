@@ -1,0 +1,103 @@
+/*global*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Titillium Web", sans-serif;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+/*utilities*/
+.container{
+    background-color:#b6c7aa;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*text styles*/
+.main-text{
+    font-weight: 900;
+    font-size:55px;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+.secondary-text{
+    font-weight:700;
+    font-size:24px;
+    margin-top:20px;
+    margin-bottom:5px;
+}
+.normal-text{
+    font-size:20px;
+    line-height:1.5;
+}
+.btn{
+    display:block;
+    width: 200px;
+    background-color: black;
+    color:white;
+    padding:15px;
+    text-align: center;
+    margin-top:30px;
+    font-size:20px;
+}
+
+/*header*/
+nav a{
+    color:black;
+    font-weight:300;
+    font-size:24px;
+    margin:10px 30px;
+}
+.site-header{
+    background-color: #b6c7aa;
+}
+
+/*Register*/
+.register-body{
+    background-color:#b6c7aa;;
+}
+.input-container{
+    display:flex;
+}
+.input-container label{
+    width:10%;
+}
+.input-container input{
+    width:80%;
+}
+.form-container{
+    padding:20px;
+}
+.form-container fieldset{
+    padding:5px 10px;
+    border-radius: 5px;
+    padding-bottom:15px;
+}
+.register-container{
+    background-color:#b6c7aa;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+}
+#register{
+    font-weight:600;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.btn-submit{
+    background-color: #A0937D;
+    border:solid 1px white;
+    padding:5px 10px;
+    margin-top:10px;
+    color:white;
+    font-weight:600;
+    letter-spacing:1px;
+}
