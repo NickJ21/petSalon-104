@@ -92,6 +92,16 @@ nav a{
     flex-direction: column;
     gap:10px;
 }
+#reg-num{
+    font-weight:600;
+    font-size: 32px;
+}
+.register-number{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom:20px;
+}
 .btn-submit{
     background-color: #A0937D;
     border:solid 1px white;
