@@ -37,5 +37,6 @@ function numRegister(){
     document.getElementById("reg-num").innerHTML+=`<p> ${(petRegister.length)} </p>`;
 }
 
+
 window.onload= numRegister()
 window.onload= displayRegister() //display registered pets on page load
