@@ -111,10 +111,12 @@ nav a{
     align-items: center;
     gap:20px;
 }
-.input-container:focus-within label,
-.input-container :valid label{
+.input-container:focus-within label{
     top:-20px;
     font-size:10px;
+}
+.input-container:valid label{
+    top:-20px;
 }
 
 
@@ -159,4 +161,25 @@ nav a{
 }
 .error{
     background-color: red;
+}
+
+/*Service*/
+.service-container{
+    background-color: #A0937D;
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border:1px solid white;
+}
+.service-container button{
+    margin-top:10px;
 }
