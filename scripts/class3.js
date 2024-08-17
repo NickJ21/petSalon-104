@@ -50,12 +50,26 @@ function deletePet(id){
     }
 }
 
+function getServices(){
+    let servicesList=read();
+    console.log(servicesList);
+    let option;
+    for (let i=0; i<servicesList.length; i++){
+        let srvc=servicesList[i];
+
+        option+=`
+        <option value="">${srvc.title}</option>
+        `;
+    }
+    $("#serviceTxt").append(option);
+}
+
 function init(){
     let pet1= new Pet("Scooby",10,"Male","231-098-3432","Husky");//my first obj
     let pet2= new Pet("Scrappy",9,"Male","908-392-8763","Mixed");
     pets.push(pet1,pet2);
     displayRow();
-
+    getServices();
 }
 
 window.onload=init;//wait to render the HTML

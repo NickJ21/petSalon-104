@@ -5,14 +5,40 @@ function Service(title, price) {
     this.price = price;
 }
 function isValid(service) {
-    let validation = true;
+    let validTitle = true;
+    let validPrice = true;
     if (service.title == "") {
-        validation = false;
-    } if (service.price == "") {
-        validation = false;
+        validTitle = false;
+        $(".titleValidationMsg").css("color","red").show();
+    } else{
+        $(".titleValidationMsg").hide();
     }
-    return validation;
+    if (service.price == "") {
+        validPrice = false;
+        $(".priceValidationMsg").css("color","red").show();
+    }else{
+        $(".priceValidationMsg").hide();
+    }
+    return validTitle && validPrice;
 }
+
+//function isValidService(service){
+//    let validTitle=true;
+//   let validPrice=true;
+//    if(service.title==""){
+//        validTitle=false;
+//        $(".titleValidationMsg").css("color","red").show();
+//    }else{
+//        $(".titleValidationMsg").hide();
+//    }
+//    if(service.price==""){
+//        validPrice=false;
+//        $(".priceValidationMsg").css("color","red").show();
+//    }else{
+//        $(".priceValidationMsg").hide();
+//    }
+//    return validTitle && validPrice;
+//}
 
 function register() {
     let title = $("#txtTitle").val();
@@ -24,9 +50,12 @@ function register() {
         $("input").val("");//clear the inputs
         services.push(newService);
         srvcDisplayRow();
-    } else {
-        alert("Please enter the information");
-    }
+    } //else {
+       // alert("Please enter the information");
+   // }
+        else{
+            return;
+        }
 }
 
 function srvcDisplayRow() {
@@ -59,7 +88,8 @@ function deleteService(id){
 function init() {
     //hook events
     $("#btnRegister").on('click', register);
-
+    $(".titleValidationMsg").hide();
+    $(".priceValidationMsg").hide();
 }
 
 window.onload = init;
